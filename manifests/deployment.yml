@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: giidlcrztestrepodevops 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: giidlcrztestrepodevops
+  template:
+    metadata:
+      labels:
+        app: giidlcrztestrepodevops 
+    spec:
+      containers:
+        - name: giidlcrztestrepodevops 
+          image: otpfcontainerregistrydevtest.azurecr.io/giidlcrztestrepodevops
+          ports:
+          - containerPort: 80
